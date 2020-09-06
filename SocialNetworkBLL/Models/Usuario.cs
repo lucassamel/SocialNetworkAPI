@@ -4,9 +4,9 @@ using System.Text;
 
 namespace SocialNetworkBLL.Models
 {
-    class Usuario
+    public class Usuario : Perfil
     {
-        public int Id { get; set; }
+        public int UsuarioId { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public string Email { get; set; }

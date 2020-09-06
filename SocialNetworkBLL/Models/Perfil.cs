@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace SocialNetworkBLL.Models
 {
-    class Perfil
-    {
-        public int IdPerfil { get; set; }
+    public class Perfil 
+    {   
+        [Key]
+        public int PerfilId { get; set; }
         public List<Usuario> Amizades { get; set; }
         public Boolean Privado { get; set; }
     }

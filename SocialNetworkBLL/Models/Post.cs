@@ -1,16 +1,20 @@
-﻿using System;
+﻿using ServiceStack.DataAnnotations;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace SocialNetworkBLL.Models
 {
-    class Post
+    public class Post
     {
-
-        public int Id { get; set; }
+        [Key]
+        public int PostId { get; set; }
         public string Tipo { get; set; }
         public DateTime DataPost { get; set; }
 
         public int UserId { get; set; }
+
+        public List<Comentario> Comentarios { get; set; }
     }
 }
