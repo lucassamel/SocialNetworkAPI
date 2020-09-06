@@ -1,7 +1,7 @@
-﻿using ServiceStack.DataAnnotations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace SocialNetworkBLL.Models
@@ -11,10 +11,13 @@ namespace SocialNetworkBLL.Models
         [Key]
         public int PostId { get; set; }
         public string Tipo { get; set; }
-        public DateTime DataPost { get; set; }
+        public DateTime DataPost { get; set; }       
 
-        public int UserId { get; set; }
+        public IEnumerable<Comentario> Comentarios { get; set; }
 
-        public List<Comentario> Comentarios { get; set; }
+        [ForeignKey("Perfil")]
+        public int PerfilId { get; set; }
+        public Perfil Perfil { get; set; }
+       
     }
 }

@@ -9,7 +9,7 @@ namespace SocialNetworkBLL.Models
     {   
         [Key]
         public int PerfilId { get; set; }
-        public List<Usuario> Amizades { get; set; }
+        public IEnumerable<Perfil> Amizades { get; set; }
         public Boolean Privado { get; set; }
     }
 }

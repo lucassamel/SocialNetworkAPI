@@ -1,18 +1,20 @@
-﻿using ServiceStack.DataAnnotations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SocialNetworkBLL.Models
 {
-    public class Comentario
+    public class Comentario 
     {
-        [ForeignKey("Post")]
+        [Key]
         public int ComentarioId { get; set; }
         public string Coment { get; set; }
         public DateTime Data { get; set; }
 
-        public Post PostId { get; set; }
+        [ForeignKey("Post")]
+        public int PostId { get; set; }
         public Post Post { get; set; }
     }
 }
