@@ -8,6 +8,8 @@ namespace SocialNetworkBLL.Models
     {
 
         public int Id { get; set; }
+        public string Tipo { get; set; }
+        public DateTime DataPost { get; set; }
 
         public int UserId { get; set; }
     }

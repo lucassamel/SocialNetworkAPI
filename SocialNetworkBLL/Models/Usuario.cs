@@ -11,5 +11,6 @@ namespace SocialNetworkBLL.Models
         public string Sobrenome { get; set; }
         public string Email { get; set; }
         public DateTime Aniversario { get; set; }
+        public string Localidade { get; set; }
     }
 }
