@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SocialNetworkBLL.Models
 {
-    public class Usuario : Perfil
+    public class Usuario 
     {
         [Key]
         public int UsuarioId { get; set; }

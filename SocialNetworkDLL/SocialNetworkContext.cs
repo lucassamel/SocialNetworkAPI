@@ -26,7 +26,7 @@ namespace SocialNetworkDLL
         {
             public SocialNetworkContext CreateDbContext(string[] args)
             {
-                IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile(@Directory.GetCurrentDirectory() + "/../SocialNetwork/appsettings.json").Build();
+                IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile(@Directory.GetCurrentDirectory() + "/../SocialNetworkAPI/appsettings.json").Build();
 
                 var builder = new DbContextOptionsBuilder<SocialNetworkContext>();
                 var connectionString = configuration.GetConnectionString("DatabaseConnection");
